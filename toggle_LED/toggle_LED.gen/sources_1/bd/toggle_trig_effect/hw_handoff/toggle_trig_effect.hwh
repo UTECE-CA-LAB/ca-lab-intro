@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 28 04:12:17 2026" VIVADOVERSION="2022.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="toggle_trig_effect" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="debouncer_1" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="toggle_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="key1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_key1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_0" PORT="SIGNAL_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="key2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_key2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_1" PORT="SIGNAL_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="toggle_0_led1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="toggle_0" PORT="led1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led2" SIGIS="undef" SIGNAME="toggle_0_led2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="toggle_0" PORT="led2"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/debouncer_0" HWVERSION="1.0" INSTANCE="debouncer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:module_ref:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DEBNC_CLOCKS" VALUE="65536"/>
+        <PARAMETER NAME="PORT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="toggle_trig_effect_debouncer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="SIGNAL_I" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_key1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="key1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="SIGNAL_O" RIGHT="0" SIGIS="undef" SIGNAME="debouncer_0_SIGNAL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="toggle_0" PORT="key1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/debouncer_1" HWVERSION="1.0" INSTANCE="debouncer_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:module_ref:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DEBNC_CLOCKS" VALUE="65536"/>
+        <PARAMETER NAME="PORT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="toggle_trig_effect_debouncer_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="SIGNAL_I" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_key2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="key2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="SIGNAL_O" RIGHT="0" SIGIS="undef" SIGNAME="debouncer_1_SIGNAL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="toggle_0" PORT="key2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/toggle_0" HWVERSION="1.0" INSTANCE="toggle_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="toggle" VLNV="xilinx.com:module_ref:toggle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="toggle_trig_effect_toggle_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="key1" SIGIS="undef" SIGNAME="debouncer_0_SIGNAL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debouncer_0" PORT="SIGNAL_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="key2" SIGIS="undef" SIGNAME="debouncer_1_SIGNAL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debouncer_1" PORT="SIGNAL_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="toggle_0_led1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led2" SIGIS="undef" SIGNAME="toggle_0_led2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

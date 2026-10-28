@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto  -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot toggle_trig_effect xil_defaultlib.toggle_trig_effect xil_defaultlib.glbl -log elaborate.log

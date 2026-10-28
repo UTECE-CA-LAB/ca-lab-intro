@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"toggle_trig_effect": {
+			"proto_instances": {
+			}
+		}
+	}
+}
