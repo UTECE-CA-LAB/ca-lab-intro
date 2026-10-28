@@ -1,5 +1,0 @@
-intro_test_01_toggle_0_0.v,verilog,xil_defaultlib,../../../bd/intro_test_01/ip/intro_test_01_toggle_0_0/sim/intro_test_01_toggle_0_0.v,
-intro_test_01_debouncer_0_0.v,verilog,xil_defaultlib,../../../bd/intro_test_01/ip/intro_test_01_debouncer_0_0/sim/intro_test_01_debouncer_0_0.v,
-intro_test_01_debouncer_0_1.v,verilog,xil_defaultlib,../../../bd/intro_test_01/ip/intro_test_01_debouncer_0_1/sim/intro_test_01_debouncer_0_1.v,
-intro_test_01.v,verilog,xil_defaultlib,../../../bd/intro_test_01/sim/intro_test_01.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v
